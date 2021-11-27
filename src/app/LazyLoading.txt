@@ -1,0 +1,31 @@
+
+Lazy Loading Modules
+
+In this section, we'll see by example how to lazy loading components using feature modules and the loadChildren() method.
+
+
+ng g module lazymodule
+
+We also need to create components inside our feature module:
+
+$ ng g c lazymodule/component1
+$ ng g c lazymodule/component2
+$ ng g c lazymodule/component3
+These commands will generate three components inside the lazymodule module.
+
+Using loadChildren()
+In the main routing file app-routing.module.ts, you need to use the loadChildren() method to lazy load the feature module:
+
+
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'lazymodule', loadChildren: './lazymodule/lazymodule.module#LazyModuleModule' }
+];
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }

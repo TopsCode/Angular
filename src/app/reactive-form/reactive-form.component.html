@@ -1,0 +1,16 @@
+<app-header></app-header>
+<p>reactive-form works!</p>
+
+<div class="container">
+    <h1>Angular Dynamic Checkboxes Example</h1>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <label formArrayName="orders" *ngFor="let order of ordersFormArray.controls; let i = index">
+            <input type="checkbox" [formControlName]="i">
+            {{webData[i].name}}
+        </label>
+
+        <br />
+        <button class="btn btn-success">submit</button>
+    </form>
+</div>

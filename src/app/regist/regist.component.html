@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+
+</div>
+<div class="container">
+    <div class="row mt-3 mt-5">
+        <div class="col-md-4 offset-md-4">
+
+            <div class="card">
+                <article class="card-body">
+                    <h4 class="card-title text-center mb-4 mt-1">Sign up</h4>
+                    <hr>
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                </div>
+                                <input name="username" class="form-control" [(ngModel)]="username"
+                                    placeholder="Email or login" id="username" type="email">
+                            </div> <!-- input-group.// -->
+                        </div> <!-- form-group// -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                </div>
+                                <input class="form-control" id="password" name="password" [(ngModel)]="password"
+                                    placeholder="******" type="password">
+                            </div> <!-- input-group.// -->
+                        </div> <!-- form-group// -->
+                        <div class="form-group">
+                            <button type="button" (click)="storeregistdata()" class="btn btn-primary btn-block"> Registration
+                            </button>
+                        </div> <!-- form-group// -->
+                    
+                    </form>
+                </article>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- <p>login works!</p> -->
